@@ -31,8 +31,7 @@ public class LoginTest extends LoginPage
 	public void test2() throws Exception
 	{
 		System.out.println("Test 1 started");
-		System.out.println(jsonReader("username").toString());
-		System.out.println(jsonReader("password").toString());
+		
 		
 		methods.enterLoginDetails(userName, password,jsonReader("username").toString(), jsonReader("password").toString());
 		takeScreenshot(GenericMethods.driver, "Test2");
