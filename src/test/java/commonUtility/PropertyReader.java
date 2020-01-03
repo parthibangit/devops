@@ -12,6 +12,7 @@ public class PropertyReader
 {
    
    static String path="C:\\Selenium files\\Projects\\DevOpsPractice\\Properties\\Config.properties";
+  // static String path="/DevOpsPractice/Properties/Config.properties";
 	
 	
 	
@@ -53,7 +54,7 @@ public class PropertyReader
 	
 	public static void main(String[] args) throws Exception
 	{
-		System.out.println("URL is " + getValue("URL") );
+		System.out.println("URL is " + getValue("chromedriver") );
 	}
 	
 	

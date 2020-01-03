@@ -33,12 +33,12 @@ public class GenericMethods
 		switch (getValue("browser")) 
 		{
 		   case "Firefox":
-			System.setProperty("", getValue("driverpath"));
+			System.setProperty("", getValue("chromedriver"));
 			driver=new FirefoxDriver();
 			break;
 			
 		   case "chrome":
-			System.setProperty("webdriver.chrome.driver", getValue("driverpath"));
+			System.setProperty("webdriver.chrome.driver", getValue("chromedriver"));
 			driver=new ChromeDriver();
 			break;
 
@@ -135,6 +135,15 @@ public class GenericMethods
 		return destination;
 		
 	}
+	
+	
+	public void clearField(By xpath) throws Exception
+	{
+		Thread.sleep(2000);
+		driver.findElement(xpath).clear();
+	}
+	
+	
 			
 	
 }
