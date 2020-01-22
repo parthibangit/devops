@@ -1,55 +1,42 @@
 package commonUtility;
 
 import java.io.FileReader;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Map.Entry;
+import java.io.Reader;
 
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
+import org.json.simple.parser.JSONParser;
+import org.yaml.snakeyaml.parser.ParserException;
 
 public class JsonReader
 {
 
 	static String path="C:\\Selenium files\\Projects\\DevOpsPractice\\TestData\\login.json";
 	
-	public static void main(String[] args) throws Exception
-
+	public static void main(String[] args) throws ParserException, Exception
 	{
-		
-		//System.out.println(jsonReader("username"));
-		JsonElement element=jsonReader("username");
-	   System.out.println(element.toString());
-		
+		System.out.println(jsonReader("username", "itlogin"));
 	}
 	
-	
-	
-	public static JsonElement jsonReader(String key) throws Exception
+	public static String jsonReader(String key, String env) throws Exception, ParserException
 	{
-		
-		//BufferedReader reader= new BufferedReader(new FileReader(path));
-		Map<String, JsonElement> map = new HashMap<>();
-		
-		JsonParser parser= new JsonParser();
-		Object obj=parser.parse(new FileReader(path));
-		JsonObject jsonObj=(JsonObject)obj;
-		JsonObject parentObject=(JsonObject)jsonObj.get("uatlogin");
-		System.out.println("Login details: " + parentObject.get("username"));
-		
-		for(Entry<String, JsonElement> values : parentObject.entrySet())
+		Reader reader = new FileReader(path);
+		JSONParser parser= new JSONParser();
+		org.json.simple.JSONArray array= (org.json.simple.JSONArray) parser.parse(reader);
+	
+		for (Object object : array) 
 		{
-			map.put(values.getKey(), values.getValue());
 			
-			if(map.containsKey(key)==true)
-			{
-				return map.get(key);
-			}
+            return getValue((org.json.simple.JSONObject) object, key, env);			
 		}
-		
-		return null;
-		
+			
+		return null;		
 	}
-		
+	
+	
+	public static String getValue(org.json.simple.JSONObject object, String key, String env)
+	{
+		org.json.simple.JSONObject userDetails=(org.json.simple.JSONObject) object.get(env);			
+		String value=(String) userDetails.get(key);
+		return value;
+	}
+			
 }

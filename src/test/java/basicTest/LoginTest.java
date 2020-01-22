@@ -2,12 +2,14 @@ package basicTest;
 
 
 
+import static commonUtility.JsonReader.jsonReader;
+import static commonUtility.Screenshot.takeScreenshot;
+
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
-import static commonUtility.Screenshot.*;
+
 import commonMethods.GenericMethods;
 import xpathCollectors.LoginPage;
-import static commonUtility.JsonReader.*;
 
 
 public class LoginTest extends LoginPage
@@ -23,7 +25,7 @@ public class LoginTest extends LoginPage
 	{
 		
 		methods=new GenericMethods(driver);
-		methods.openBrowser();
+		methods.openBrowser("it");
 		
 	}
 	
@@ -32,13 +34,11 @@ public class LoginTest extends LoginPage
 	{
 		System.out.println("Test 1 started");
 		
-		
-		methods.enterLoginDetails(userName, password,jsonReader("username").toString(), jsonReader("password").toString());
+		methods.enterLoginDetails(userName, password,jsonReader("username", "itlogin"), jsonReader("password", "itlogin"));
 		takeScreenshot(GenericMethods.driver, "Test2");
-		methods.buttonClick(button);
-		//methods.takeScreenshot("Login Test");
+		methods.buttonClick(button);	
 		Thread.sleep(2000);
-		//takeScreenshot(GenericMethods.driver, "Test2");
+		
 		System.out.println("Test 1 completed");
 		
 	}

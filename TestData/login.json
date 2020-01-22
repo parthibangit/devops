@@ -1,5 +1,6 @@
-{
-   
+[
+
+{ 
    "uatlogin":
    {
    
@@ -7,4 +8,14 @@
         "password" : "Nov@2019"
    }
 
+   
+   "itlogin":
+   {
+   
+        "username" : "divya.kumar1@usbank.com.it",
+        "password" : "Dec@2019"
+   }
+
 }
+
+]

@@ -16,18 +16,18 @@ import org.testng.annotations.Test;
 public class ExcelTest {
 
 	
-//	@Test(dataProvider="data")
-//	public void test1(Map<String, String> map)
-//	{
-//		System.out.println("User name is: " + map.get("UserName"));
-//		System.out.println("Password is: " + map.get("Password"));
-//	}
+	@Test(dataProvider="data")
+	public void test1(Map<String, String> map)
+	{
+		System.out.println("User name is: " + map.get("UserName"));
+		System.out.println("Password is: " + map.get("Password"));
+	}
 	
 	
 	
-	//@DataProvider(name="data")
-	//public static Object[][] excel() throws Exception
-	public static void main(String[] args) throws Exception
+	@DataProvider(name="data")
+	public static Object[][] excel() throws Exception
+	//public static void main(String[] args) throws Exception
 	{
 		
 		//String keys = "";
@@ -41,7 +41,7 @@ public class ExcelTest {
 		
 		int total_rows=sheet.getLastRowNum();
 		int total_col=sheet.getRow(0).getLastCellNum();
-		//Object[][] obj=new Object[total_rows][1];
+	   Object[][] obj=new Object[total_rows][1];
 		
 		
 		for(int row=0; row<total_rows; row++)
@@ -63,20 +63,22 @@ public class ExcelTest {
 					   map.put(keys, value);					 
 				 }
 				 
+				 else
+				 {
 				 String keys=key_cell.getStringCellValue();
 				 value=value_cell.getStringCellValue();
 				 map.put(keys, value);
-				 
+				 }
 			}
 		
 			System.out.println("User name is: " + map.get("UserName"));
 			System.out.println("Password is: " + map.get("Password"));
 			
 			
-			//obj[row][0]=map;
+			obj[row][0]=map;
 		}
 		
-		//return obj;
+		return obj;
 		
 	}
 

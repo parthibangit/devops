@@ -12,10 +12,7 @@ public class PropertyReader
 {
    
    static String path="C:\\Selenium files\\Projects\\DevOpsPractice\\Properties\\Config.properties";
-  // static String path="/DevOpsPractice/Properties/Config.properties";
-	
-	
-	
+  
 	public static String getValue(String key) throws Exception
 	{
 		
@@ -24,8 +21,7 @@ public class PropertyReader
 		Map<String, String> map=new HashMap<String, String>();
 		
 		try 
-		{
-			//properties.load(PropertyReader.class.getResourceAsStream("/DevOpsPractice/Properties/Config.properties"));
+		{			
 			properties.load(reader);
 		}
 		catch (Exception e) 
@@ -52,10 +48,10 @@ public class PropertyReader
 	}
 	
 	
-	public static void main(String[] args) throws Exception
-	{
-		System.out.println("URL is " + getValue("chromedriver") );
-	}
+//	public static void main(String[] args) throws Exception
+//	{
+//		System.out.println("URL is " + getValue("chromedriver") );
+//	}
 	
 	
 }
