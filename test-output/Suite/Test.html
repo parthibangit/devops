@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/0/1</td>
+<td>Tests passed/Failed/Skipped:</td><td>3/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Jan 08 18:44:02 IST 2020</td>
+<td>Started on:</td><td>Thu Dec 05 18:25:57 IST 2019</td>
 </tr>
-<tr><td>Total time:</td><td>0 seconds (259 ms)</td>
+<tr><td>Total time:</td><td>63 seconds (63690 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,70 +67,28 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-skipped'>
-<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='basicTest.GitClass.test()'><b>test</b><br>Test class: basicTest.GitClass</td>
-<td><div><pre>java.lang.RuntimeException: java.lang.IncompatibleClassChangeError: Found interface org.apache.poi.util.POILogger, but class was expected
-Caused by: java.lang.IncompatibleClassChangeError: Found interface org.apache.poi.util.POILogger, but class was expected
-	at org.apache.poi.openxml4j.opc.PackageRelationshipCollection.parseRelationshipsPart(PackageRelationshipCollection.java:303)
-	at org.apache.poi.openxml4j.opc.PackageRelationshipCollection.&lt;init&gt;(PackageRelationshipCollection.java:163)
-	at org.apache.poi.openxml4j.opc.PackageRelationshipCollection.&lt;init&gt;(PackageRelationshipCollection.java:133)
-	at org.apache.poi.openxml4j.opc.PackagePart.loadRelationships(PackagePart.java:570)
-	at org.apache.poi.openxml4j.opc.OPCPackage.getParts(OPCPackage.java:727)
-	at org.apache.poi.openxml4j.opc.OPCPackage.open(OPCPackage.java:301)
-	at org.apache.poi.ooxml.util.PackageHelper.open(PackageHelper.java:37)
-	at org.apache.poi.xssf.usermodel.XSSFWorkbook.&lt;init&gt;(XSSFWorkbook.java:307)
-	at basicTest.GitClass.getData(GitClass.java:29)
-	... 20 more
-... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace24233834", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace24233834'><pre>java.lang.RuntimeException: java.lang.IncompatibleClassChangeError: Found interface org.apache.poi.util.POILogger, but class was expected
-	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:162)
-	at org.testng.internal.Parameters.handleParameters(Parameters.java:430)
-	at org.testng.internal.Invoker.handleParameters(Invoker.java:1270)
-	at org.testng.internal.Invoker.createParameters(Invoker.java:985)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1075)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:774)
-	at org.testng.TestRunner.run(TestRunner.java:624)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1215)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
-	at org.testng.TestNG.run(TestNG.java:1048)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: java.lang.IncompatibleClassChangeError: Found interface org.apache.poi.util.POILogger, but class was expected
-	at org.apache.poi.openxml4j.opc.PackageRelationshipCollection.parseRelationshipsPart(PackageRelationshipCollection.java:303)
-	at org.apache.poi.openxml4j.opc.PackageRelationshipCollection.&lt;init&gt;(PackageRelationshipCollection.java:163)
-	at org.apache.poi.openxml4j.opc.PackageRelationshipCollection.&lt;init&gt;(PackageRelationshipCollection.java:133)
-	at org.apache.poi.openxml4j.opc.PackagePart.loadRelationships(PackagePart.java:570)
-	at org.apache.poi.openxml4j.opc.OPCPackage.getParts(OPCPackage.java:727)
-	at org.apache.poi.openxml4j.opc.OPCPackage.open(OPCPackage.java:301)
-	at org.apache.poi.ooxml.util.PackageHelper.open(PackageHelper.java:37)
-	at org.apache.poi.xssf.usermodel.XSSFWorkbook.&lt;init&gt;(XSSFWorkbook.java:307)
-	at basicTest.GitClass.getData(GitClass.java:29)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:136)
-	... 20 more
-</pre></div></td>
-<td>0</td>
-<td>basicTest.GitClass@19e13df</td></tr>
+<td title='basicTest.LoginTest.test1()'><b>test1</b><br>Test class: basicTest.LoginTest</td>
+<td></td>
+<td>7</td>
+<td>basicTest.LoginTest@475530b9</td></tr>
+<tr>
+<td title='basicTest.LoginTest.test2()'><b>test2</b><br>Test class: basicTest.LoginTest</td>
+<td></td>
+<td>4</td>
+<td>basicTest.LoginTest@475530b9</td></tr>
+<tr>
+<td title='basicTest.LoginTest.test3()'><b>test3</b><br>Test class: basicTest.LoginTest</td>
+<td></td>
+<td>52</td>
+<td>basicTest.LoginTest@475530b9</td></tr>
 </table><p>
 </body>
 </html>
