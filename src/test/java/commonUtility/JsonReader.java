@@ -9,7 +9,7 @@ import org.yaml.snakeyaml.parser.ParserException;
 public class JsonReader
 {
 
-	static String path="C:\\Selenium files\\Projects\\DevOpsPractice\\TestData\\login.json";
+static String path="C:\\Selenium files\\Projects\\DevOpsPractice\\TestData\\login.json";
 	
 	public static void main(String[] args) throws ParserException, Exception
 	{
@@ -25,7 +25,7 @@ public class JsonReader
 		for (Object object : array) 
 		{
 			
-            return getValue((org.json.simple.JSONObject) object, key, env);			
+           return getValue((org.json.simple.JSONObject) object, key, env);			
 		}
 			
 		return null;		
@@ -38,5 +38,5 @@ public class JsonReader
 		String value=(String) userDetails.get(key);
 		return value;
 	}
-			
+		
 }

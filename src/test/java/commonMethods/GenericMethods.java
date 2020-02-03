@@ -157,8 +157,5 @@ public class GenericMethods extends LoginPage
 		Thread.sleep(2000);
 		driver.findElement(xpath).clear();
 	}
-	
-	
-			
-	
+		
 }
